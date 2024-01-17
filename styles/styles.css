@@ -1,8 +1,23 @@
-
+body{
+    background-color: rgb(2, 2, 64);
+}
 
 h1{
     color: gray;
+    font-size: 50px;
 }
 h2{
     color: white;
+}
+header{
+    padding: 2rem;
+    text-align: center;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    height: 500px;
+    padding: 2rem;
 }

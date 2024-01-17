@@ -1,31 +1,11 @@
 <?php
 
+include __DIR__ . '/function.php';
+
 $lunghezza = $_GET['lunghezzaP'];
 
 
 
-function generaPasswordCasuale($lunghezza = 4) {
-    // Caratteri password
-    $caratteri = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
-
-    // Lunghezza caratteri disponibili
-    $lunghezzaCaratteri = strlen($caratteri);
-
-    
-    $password = '';
-
-    // Genera la password casuale
-    for ($i = 0; $i < $lunghezza; $i++) {
-       
-        $carattereCasuale = $caratteri[rand(0, $lunghezzaCaratteri - 1)];
-
-        // Aggiungi il carattere casuale alla password
-        $password .= $carattereCasuale;
-    }
-
-    
-    return $password;
-}
 
 
 
@@ -59,20 +39,22 @@ function generaPasswordCasuale($lunghezza = 4) {
 
    
 
+    <main>
+        <form action="./index.php" method="GET">
+            <div>
+                <label for="lunghezzaP">inserisci la lunghezza della password</label>
+                <input type="number" name="lunghezzaP" id="lunghezzaP">
+                <button type="submit">CREA</button>
+            </div>
+            
+        </form>
 
-    <form action="./index.php" method="GET">
-        <div>
-            <label for="lunghezzaP">inserisci la lunghezza della password</label>
-            <input type="number" name="lunghezzaP" id="lunghezzaP">
-
-        </div>
-        
-    </form>
-
-    <?php
-        $passwordGenerata = generaPasswordCasuale($lunghezza);
-        echo "Password casuale generata: $passwordGenerata";
-    ?>
+        <?php
+            $passwordGenerata = generaPasswordCasuale($lunghezza);
+            echo "Password casuale generata: $passwordGenerata";
+        ?>
+    </main>
+   
     
 </body>
 </html>
