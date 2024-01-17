@@ -1,6 +1,8 @@
 <?php
 
-//$lunghezza = $_GET['lunghezza'];
+$lunghezza = $_GET['lunghezzaP'];
+
+
 
 function generaPasswordCasuale($lunghezza = 4) {
     // Caratteri password
@@ -26,8 +28,7 @@ function generaPasswordCasuale($lunghezza = 4) {
 }
 
 
-$passwordGenerata = generaPasswordCasuale();
-echo "Password casuale generata: $passwordGenerata";
+
 
 ?>
 
@@ -56,16 +57,22 @@ echo "Password casuale generata: $passwordGenerata";
         </h2>
     </header>
 
-    
+   
 
 
     <form action="./index.php" method="GET">
         <div>
             <label for="lunghezzaP">inserisci la lunghezza della password</label>
-            <input type="text" name="lunghezzaP" id="lunghezzaP">
+            <input type="number" name="lunghezzaP" id="lunghezzaP">
+
         </div>
-        <button type="submit">Crea</button>
+        
     </form>
+
+    <?php
+        $passwordGenerata = generaPasswordCasuale($lunghezza);
+        echo "Password casuale generata: $passwordGenerata";
+    ?>
     
 </body>
 </html>
