@@ -36,23 +36,29 @@ $lunghezza = $_GET['lunghezzaP'];
             Genera una password sicura
         </h2>
     </header>
-
-   
-
-    <main>
-        <form action="./index.php" method="GET">
-            <div>
-                <label for="lunghezzaP">inserisci la lunghezza della password</label>
-                <input type="number" name="lunghezzaP" id="lunghezzaP">
-                <button type="submit">CREA</button>
-            </div>
-            
-        </form>
+    <section>
 
         <?php
             $passwordGenerata = generaPasswordCasuale($lunghezza);
             echo "Password casuale generata: $passwordGenerata";
         ?>
+
+    </section>
+
+   
+
+    <main>
+        <form action="./index.php" method="GET">
+            <div class="d-flex justify-content-between">
+                <label for="lunghezzaP">Lunghezza password</label>
+                <input type="number" name="lunghezzaP" id="lunghezzaP">
+                
+            </div>
+            <button class="mt-5" type="submit">CREA</button>
+            
+        </form>
+
+       
     </main>
    
     
