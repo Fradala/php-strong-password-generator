@@ -18,7 +18,7 @@ main{
     width: 80%;
     margin: auto;
     background-color: white;
-    height: 200px;
+    height: 350px;
     padding: 2rem;
     margin-top: 20px;
     border-radius: 10px;
@@ -33,4 +33,11 @@ section{
     padding: 2rem;
     display: flex;
     align-items: center;
+}
+
+.modificheP{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 10px;
 }

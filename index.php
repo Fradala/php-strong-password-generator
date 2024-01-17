@@ -49,11 +49,44 @@ $lunghezza = $_GET['lunghezzaP'];
 
     <main>
         <form action="./index.php" method="GET">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mb-2">
                 <label for="lunghezzaP">Lunghezza password</label>
                 <input type="number" name="lunghezzaP" id="lunghezzaP">
-                
             </div>
+            <div class="d-flex justify-content-between">
+                <label for="caratteri">Consenti ripetizioni uno o più caratteri:</label>
+                <div class="me-5">
+                    <div>
+                        <input type="checkbox"> 
+                        <label for="checkbox">si</label>
+                    </div>
+                    <div>
+                        <input type="checkbox"> 
+                        <label for="checkbox">no</label>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="modificheP me-3">
+                <div>
+                    <input type="checkbox"> 
+                    <label for="checkbox">Lettere</label>
+                </div>
+                <div class="mt-2 mb-2">
+                    <input type="checkbox">
+                    <label for="checkbox">Numeri</label>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="checkbox">Simboli</label>
+                </div>
+            
+            </div>
+            
+
+                
+                
+            
             <button class="mt-5" type="submit">CREA</button>
             
         </form>
